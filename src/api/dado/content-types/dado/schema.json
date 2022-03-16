@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dados",
+  "info": {
+    "singularName": "dado",
+    "pluralName": "dados",
+    "displayName": "Dados",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data_insercao": {
+      "type": "datetime",
+      "required": true
+    },
+    "Regiao": {
+      "type": "string",
+      "required": true,
+      "default": "Araranguá"
+    },
+    "Volume": {
+      "type": "float",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Hectares": {
+      "type": "decimal",
+      "required": true
+    },
+    "Tempo_de_plantacao": {
+      "type": "integer",
+      "required": true
+    },
+    "Vazao": {
+      "type": "decimal",
+      "required": true
+    },
+    "Preparacao_do_solo": {
+      "type": "integer",
+      "required": true
+    },
+    "Gasto_de_agua": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}
